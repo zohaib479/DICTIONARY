@@ -1,6 +1,13 @@
 const btn=document.querySelector('.s');
 const resultt=document.querySelector('.result')
 const synonym=document.querySelector('.syn')
+const speak = document.querySelector('.sa');
+
+    speak.addEventListener('click',(e)=>{
+        let val=(document.querySelector('.l').value)  
+        const k = new SpeechSynthesisUtterance(val)
+        speechSynthesis.speak(k)
+    })    
 
 btn.addEventListener('click',(e)=>{
     e.preventDefault();
